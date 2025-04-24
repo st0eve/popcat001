@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PopMeow</title>
+  <style>
+    body { text-align: center; font-family: sans-serif; }
+    img { width: 250px; cursor: pointer; }
+    h1 { font-size: 50px; }
+  </style>
+</head>
+<body>
+  <h1 id="counter">0</h1>
+  <img src="https://i.imgur.com/oHg5YlF.png" id="popcat" alt="popcat">
+  <audio id="popSound" src="https://www.myinstants.com/media/sounds/pop-cat.mp3"></audio>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById('counter');
+    const popcat = document.getElementById('popcat');
+    const popSound = document.getElementById('popSound');
+
+    popcat.onclick = () => {
+      count++;
+      counter.innerText = count;
+      popSound.currentTime = 0;
+      popSound.play();
+    };
+  </script>
+</body>
+</html>
 
